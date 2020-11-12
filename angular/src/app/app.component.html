@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular: Getting started with Scheduler</title>
+</head>
+<body>
+  <dx-scheduler
+    [height]="600"
+    [startDayHour]="10"  
+    [currentDate]="currentDate"
+    [dataSource]="appointmentsData"
+    [views]='["day", "week", "month", "timelineWeek"]'
+    currentView="week"
+    [groups]="['priorityId']"
+    timeZone="Europe/Berlin"
+    [adaptivityEnabled]="true">
+
+    <dxo-editing
+      [allowDragging]="false"
+      [allowTimeZoneEditing]="true"
+    ></dxo-editing>
+
+    <dxi-resource
+      [dataSource]="prioritiesData"
+      fieldExpr="priorityId"
+      label="Priority">
+    </dxi-resource>
+  </dx-scheduler>  
+</body>
+</html>
+
+
