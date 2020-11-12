@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <template>
-      <DxScheduler
+      <DxScheduler id="scheduler"
         :current-date="currentDate"
-        :height="600"
         :start-day-hour="10"
         :data-source="dataSource"
         :views="views"
@@ -61,5 +60,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+</style>
+
+
+<style>
+#scheduler {
+  height: 600px;
 }
 </style>

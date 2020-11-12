@@ -5,7 +5,6 @@ $(function(){
         currentView: "week",
         startDayHour: 10,
         currentDate: new Date(2021, 4, 25),
-        height: 600,
         resources: [
             {
                 fieldExpr: "priorityId",
@@ -19,6 +18,6 @@ $(function(){
             allowTimeZoneEditing: true
         },
         timeZone: "Europe/Berlin",
-        // adaptivityEnabled: true,
+        adaptivityEnabled: true,
     }).dxScheduler("instance");
 });

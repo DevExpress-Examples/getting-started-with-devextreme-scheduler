@@ -13,9 +13,8 @@ function App() {
   return (
     <div className="App">
       <div id="app-container">
-        <Scheduler
+        <Scheduler id="scheduler"
           startDayHour={10}
-          height={600}
           defaultCurrentDate={currentDate}
           dataSource={data}
           views={views}
