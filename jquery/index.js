@@ -1,10 +1,11 @@
 $(function(){
     var scheduler = $("#scheduler").dxScheduler({
+        currentDate: new Date(2021, 4, 25),
+        height: 600,
         dataSource: data,
         views: ["day", "week", "month", "timelineWeek"],
         currentView: "week",
         startDayHour: 10,
-        currentDate: new Date(2021, 4, 25),
         resources: [
             {
                 fieldExpr: "priorityId",

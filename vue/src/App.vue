@@ -1,30 +1,27 @@
 <template>
-  <div id="app">
-    <template>
-      <DxScheduler id="scheduler"
-        :current-date="currentDate"
-        :start-day-hour="10"
-        :data-source="dataSource"
-        :views="views"
-        current-view="week"
-        :groups="groups"
-        timeZone="Europe/Berlin"
-        :adaptivity-enabled="true"
-      >
+  <DxScheduler
+    :current-date="currentDate"
+    :height="600"
+    :start-day-hour="10"
+    :data-source="dataSource"
+    :views="views"
+    current-view="week"
+    :groups="groups"
+    timeZone="Europe/Berlin"
+    :adaptivity-enabled="true"
+  >
 
-        <DxEditing
-          :allow-editing-time-zones="true"
-          :allow-dragging="false"
-        />
+    <DxEditing
+      :allow-editing-time-zones="true"
+      :allow-dragging="false"
+    />
 
-        <DxResource
-          :data-source="priorities"
-          field-expr="priorityId"
-          label="Priority"
-        />
-      </DxScheduler>
-    </template>
-  </div>
+    <DxResource
+      :data-source="priorities"
+      field-expr="priorityId"
+      label="Priority"
+    />
+  </DxScheduler>
 </template>
 
 <script>
@@ -34,7 +31,7 @@ import { DxScheduler, DxResource, DxEditing } from 'devextreme-vue/scheduler';
 import { data, priorities } from './data.js';
 
 export default {
-  name: 'App',
+  name: 'Vue: Getting started with Scheduler',
   components: {
     DxScheduler,
     DxResource, 
@@ -52,17 +49,3 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-#scheduler {
-  height: 600px;
-}
-</style>
