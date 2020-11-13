@@ -9,7 +9,7 @@
   <dx-scheduler id="scheduler"
     [startDayHour]="10"  
     [currentDate]="currentDate"
-    [dataSource]="appointmentsData"
+    [dataSource]="data"
     [views]='["day", "week", "month", "timelineWeek"]'
     currentView="week"
     [groups]="['priorityId']"
@@ -22,7 +22,7 @@
     ></dxo-editing>
 
     <dxi-resource
-      [dataSource]="prioritiesData"
+      [dataSource]="priorities"
       fieldExpr="priorityId"
       label="Priority">
     </dxi-resource>
