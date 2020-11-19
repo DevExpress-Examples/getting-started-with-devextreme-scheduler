@@ -1,15 +1,14 @@
 <template>
   <DxScheduler
-    :current-date="currentDate"
     :height="600"
     :start-day-hour="10"
+    :current-date="currentDate"
     :data-source="dataSource"
     :views="views"
     current-view="week"
     :groups="groups"
     timeZone="Europe/Berlin"
-    :adaptivity-enabled="true"
-  >
+    :adaptivity-enabled="true">
 
     <DxEditing
       :allow-editing-time-zones="true"
@@ -31,7 +30,9 @@ import { DxScheduler, DxResource, DxEditing } from 'devextreme-vue/scheduler';
 import { data, priorities } from './data.js';
 
 export default {
-  name: 'Vue: Getting started with Scheduler',
+  created () {
+    document.title = "Vue: Getting Started with Scheduler";
+  },
   components: {
     DxScheduler,
     DxResource, 

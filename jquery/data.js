@@ -1,4 +1,4 @@
-var data = [
+const data = [
     {
         text: "Install New Database",
         priorityId: 1,
@@ -58,7 +58,7 @@ var data = [
     }
 ];
 
-var priorities = [
+const priorities = [
     {
         text: "High priority",
         id: 1,

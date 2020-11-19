@@ -1,6 +1,5 @@
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
-import './App.css';
 
 import { Scheduler, Resource, Editing } from 'devextreme-react/scheduler';
 import { data, priorities } from './data.js';
@@ -14,8 +13,8 @@ function App() {
     <div className="App">
       <div id="app-container">
         <Scheduler
-          startDayHour={10}
           height={600}
+          startDayHour={10}
           defaultCurrentDate={currentDate}
           dataSource={data}
           views={views}

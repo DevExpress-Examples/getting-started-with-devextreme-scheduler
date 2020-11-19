@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Angular: Getting started with Scheduler</title>
 </head>
-<body>
+<body class="dx-viewport"> 
   <dx-scheduler
     [height]="600"
     [startDayHour]="10"  
-    [currentDate]="currentDate"
+    [(currentDate)]="currentDate"
     [dataSource]="data"
-    [views]='["day", "week", "month", "timelineWeek"]'
+    [views]="['day', 'week', 'month', 'timelineWeek']"
     currentView="week"
     [groups]="['priorityId']"
     timeZone="Europe/Berlin"

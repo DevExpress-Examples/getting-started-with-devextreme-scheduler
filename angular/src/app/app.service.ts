@@ -95,7 +95,7 @@ export class AppService {
     return appointments;
   }
 
-  getPriorities() {
+  getPriorities(): Priority[] {
     return prioritiesData;
   }
 }
