@@ -20,5 +20,5 @@ $(function(){
         },
         timeZone: "Europe/Berlin",
         adaptivityEnabled: true,
-    }).dxScheduler();
+    });
 });
