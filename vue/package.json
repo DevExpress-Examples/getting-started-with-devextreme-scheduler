@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "devextreme": "20.1.7",
-    "devextreme-vue": "20.1.7"
+    "devextreme": "20.2.3",
+    "devextreme-vue": "20.2.3",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
