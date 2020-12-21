@@ -1,27 +1,44 @@
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
+import './App.css'
 
-import { Scheduler, Resource, Editing } from 'devextreme-react/scheduler';
-import { data, priorities } from './data.js';
+import { Scheduler, Resource, View, Editing } from 'devextreme-react/scheduler';
+import { appointments, priorities } from './data.js';
 
 const currentDate = new Date(2021, 4, 25);
-const views = ["day", "week", "month", "timelineWeek"];
 const groups = ['priorityId'];
 
 function App() {
   return (
     <div className="App">
       <div id="app-container">
-        <Scheduler
-          height={600}
-          startDayHour={10}
+        <Scheduler id="scheduler"
           defaultCurrentDate={currentDate}
-          dataSource={data}
-          views={views}
-          defaultCurrentView="week"
+          dataSource={appointments}
+          textExpr="appointmentText"
+          startDateExpr="start"
+          endDateExpr="end"
+          allDayExpr="wholeDay"
+          recurrenceRuleExpr="recurrence"
+          defaultCurrentView="workWeek"
           groups={groups}
           timeZone="Europe/Berlin"
           adaptivityEnabled={true}>
+
+          <View
+            type="day"
+          />
+          <View
+            type="workWeek"
+            startDayHour={10}
+            endDayHour={22}
+          />
+          <View
+            type="month"
+          />
+          <View
+            type="timelineWeek"
+          />
 
           <Editing
             allowTimeZoneEditing={true}

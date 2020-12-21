@@ -1,14 +1,31 @@
 <template>
-  <DxScheduler
-    :height="600"
-    :start-day-hour="10"
+  <DxScheduler id="scheduler"
     :current-date="currentDate"
-    :data-source="dataSource"
-    :views="views"
-    current-view="week"
+    :data-source="appointments"
+    textExpr="appointmentText"
+    startDateExpr="start"
+    endDateExpr="end"
+    allDayExpr="wholeDay"
+    recurrenceRuleExpr="recurrence"
+    current-view="workWeek"
     :groups="groups"
     timeZone="Europe/Berlin"
     :adaptivity-enabled="true">
+
+      <DxView
+        type="day"
+      />
+      <DxView
+        type="workWeek"
+        :start-day-hour="10"
+        :end-day-hour="22"
+      />
+      <DxView
+        type="month"
+      />
+      <DxView
+        type="timelineWeek"
+      />
 
     <DxEditing
       :allow-editing-time-zones="true"
@@ -25,9 +42,9 @@
 
 <script>
 
-import { DxScheduler, DxResource, DxEditing } from 'devextreme-vue/scheduler';
+import { DxScheduler, DxResource, DxView, DxEditing } from 'devextreme-vue/scheduler';
 
-import { data, priorities } from './data.js';
+import { appointments, priorities } from './data.js';
 
 export default {
   created () {
@@ -35,14 +52,14 @@ export default {
   },
   components: {
     DxScheduler,
-    DxResource, 
+    DxResource,
+    DxView,
     DxEditing
   },
   data() {
     return {
-      views: ["day", "week", "month", "timelineWeek"],
       currentDate: new Date(2021, 4, 25),
-      dataSource: data,
+      appointments: appointments,
       priorities: priorities,
       groups: ['priorityId'],
     };
@@ -59,5 +76,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#scheduler {
+    height: 600px;
 }
 </style> 

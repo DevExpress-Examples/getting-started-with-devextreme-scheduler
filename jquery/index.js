@@ -1,11 +1,23 @@
 $(function(){
-    var scheduler = $("#scheduler").dxScheduler({
-        height: 600,
-        startDayHour: 10,
+    var scheduler =  $("#scheduler").dxScheduler({
         currentDate: new Date(2021, 4, 25),
-        dataSource: data,
-        views: ["day", "week", "month", "timelineWeek"],
-        currentView: "week",
+        dataSource: appointments,
+        textExpr: "appointmentText",
+        startDateExpr: "start",
+        endDateExpr: "end",
+        allDayExpr: "wholeDay",
+        recurrenceRuleExpr: "recurrence",
+        currentView: "workWeek",
+        views: [
+            "day",
+            {
+                type: "workWeek",
+                startDayHour: 10,
+                endDayHour: 22
+            },
+            "month", 
+            "timelineWeek"
+        ],
         resources: [
             {
                 fieldExpr: "priorityId",

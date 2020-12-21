@@ -6,16 +6,33 @@
   <title>Angular: Getting started with Scheduler</title>
 </head>
 <body class="dx-viewport"> 
-  <dx-scheduler
-    [height]="600"
-    [startDayHour]="10"  
+  <dx-scheduler id="scheduler"
     [(currentDate)]="currentDate"
-    [dataSource]="data"
-    [views]="['day', 'week', 'month', 'timelineWeek']"
-    currentView="week"
+    [dataSource]="appointments"
+    textExpr="appointmentText"
+    startDateExpr="start"
+    endDateExpr="end"
+    allDayExpr="wholeDay"
+    recurrenceRuleExpr="recurrence"
+    currentView="workWeek"
     [groups]="['priorityId']"
     timeZone="Europe/Berlin"
     [adaptivityEnabled]="true">
+
+    <dxi-view
+      type="day">
+    </dxi-view>
+    <dxi-view
+      type="workWeek"
+      [startDayHour]="10"
+      [endDayHour]="22">
+    </dxi-view>
+    <dxi-view
+      type="month">
+    </dxi-view>
+    <dxi-view
+      type="timelineWeek">
+    </dxi-view>
 
     <dxo-editing
       [allowDragging]="false"
@@ -27,6 +44,7 @@
       fieldExpr="priorityId"
       label="Priority">
     </dxi-resource>
+
   </dx-scheduler>  
 </body>
 </html>
