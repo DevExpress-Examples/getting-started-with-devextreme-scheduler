@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import {DxSchedulerModule} from 'devextreme-angular';
+import { DxSchedulerModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [

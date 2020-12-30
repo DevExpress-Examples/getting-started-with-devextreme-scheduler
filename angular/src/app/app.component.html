@@ -1,52 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angular: Getting started with Scheduler</title>
-</head>
-<body class="dx-viewport"> 
-  <dx-scheduler id="scheduler"
-    [(currentDate)]="currentDate"
-    [dataSource]="appointments"
-    textExpr="appointmentText"
-    startDateExpr="start"
-    endDateExpr="end"
-    allDayExpr="wholeDay"
-    recurrenceRuleExpr="recurrence"
-    currentView="workWeek"
-    [groups]="['priorityId']"
-    timeZone="Europe/Berlin"
-    [adaptivityEnabled]="true">
-
-    <dxi-view
-      type="day">
-    </dxi-view>
-    <dxi-view
-      type="workWeek"
-      [startDayHour]="10"
-      [endDayHour]="22">
-    </dxi-view>
-    <dxi-view
-      type="month">
-    </dxi-view>
-    <dxi-view
-      type="timelineWeek">
-    </dxi-view>
-
-    <dxo-editing
-      [allowDragging]="false"
-      [allowTimeZoneEditing]="true"
-    ></dxo-editing>
-
-    <dxi-resource
-      [dataSource]="priorities"
-      fieldExpr="priorityId"
-      label="Priority">
-    </dxi-resource>
-
-  </dx-scheduler>  
-</body>
-</html>
-
+<dx-scheduler id="scheduler"
+  [dataSource]="appointments"
+  textExpr="title"
+  startDateExpr="start"
+  endDateExpr="end"
+  allDayExpr="dayLong"
+  recurrenceRuleExpr="recurrence"
+  [(currentDate)]="currentDate"
+  currentView="week"
+  timeZone="Europe/Berlin"
+  [adaptivityEnabled]="true">
+  <dxi-view
+    type="day"
+    [startDayHour]="10"
+    [endDayHour]="22">
+  </dxi-view>
+  <dxi-view
+    type="week"
+    [startDayHour]="10"
+    [endDayHour]="22">
+  </dxi-view>
+  <dxi-view type="month"></dxi-view>
+  <dxo-editing
+    [allowDragging]="false"
+    [allowTimeZoneEditing]="true">
+  </dxo-editing>
+</dx-scheduler>
 
