@@ -1,36 +1,29 @@
 $(function(){
-    var scheduler =  $("#scheduler").dxScheduler({
-        currentDate: new Date(2021, 4, 25),
+    $("#scheduler").dxScheduler({
         dataSource: appointments,
-        textExpr: "appointmentText",
+        textExpr: "title",
         startDateExpr: "start",
         endDateExpr: "end",
-        allDayExpr: "wholeDay",
+        allDayExpr: "dayLong",
+        currentDate: new Date(2021, 4, 25),
         recurrenceRuleExpr: "recurrence",
-        currentView: "workWeek",
-        views: [
-            "day",
-            {
-                type: "workWeek",
-                startDayHour: 10,
-                endDayHour: 22
-            },
-            "month", 
-            "timelineWeek"
+        views: [{
+            type: "day",
+            startDayHour: 10,
+            endDayHour: 22
+        }, {
+            type: "week",
+            startDayHour: 10,
+            endDayHour: 22
+        },
+        "month"
         ],
-        resources: [
-            {
-                fieldExpr: "priorityId",
-                dataSource: priorities,
-                label: "Priority"
-            }
-        ],
-        groups: ["priorityId"],
+        currentView: "week",
         editing: {
             allowDragging: false,
             allowTimeZoneEditing: true
         },
         timeZone: "Europe/Berlin",
-        adaptivityEnabled: true,
+        adaptivityEnabled: true
     });
 });
