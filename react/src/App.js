@@ -19,8 +19,6 @@ function App() {
       <Scheduler id="scheduler"
         dataSource={appointments}
         textExpr="title"
-        startDateExpr="start"
-        endDateExpr="end"
         allDayExpr="dayLong"
         recurrenceRuleExpr="recurrence"
         currentDate={currentDate}

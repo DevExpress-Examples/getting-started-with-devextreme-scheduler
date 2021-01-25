@@ -2,8 +2,6 @@
   <DxScheduler id="scheduler"
     :data-source="appointments"
     text-expr="title"
-    start-date-expr="start"
-    end-date-expr="end"
     all-day-expr="dayLong"
     recurrence-rule-expr="recurrence"
     :current-date.sync="currentDate"

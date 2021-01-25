@@ -2,11 +2,9 @@ $(function(){
     $("#scheduler").dxScheduler({
         dataSource: appointments,
         textExpr: "title",
-        startDateExpr: "start",
-        endDateExpr: "end",
         allDayExpr: "dayLong",
-        currentDate: new Date(2021, 4, 25),
         recurrenceRuleExpr: "recurrence",
+        currentDate: new Date(2021, 4, 25),
         views: [{
             type: "day",
             startDayHour: 10,
