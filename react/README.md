@@ -1,4 +1,6 @@
-# react: getting-started-with-scheduler
+# Getting Started with DevExtreme React Scheduler
+
+This repository stores React source code for the [Getting Started with Scheduler](https://js.devexpress.com/Documentation/Guide/UI_Components/Scheduler/Getting_Started_with_Scheduler/) tutorial.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

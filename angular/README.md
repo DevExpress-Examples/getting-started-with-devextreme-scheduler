@@ -1,4 +1,6 @@
-# angular: getting-started-with-scheduler
+# Getting Started with DevExtreme Angular Scheduler
+
+This repository stores Angular source code for the [Getting Started with Scheduler](https://js.devexpress.com/Documentation/Guide/UI_Components/Scheduler/Getting_Started_with_Scheduler/) tutorial.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
 
