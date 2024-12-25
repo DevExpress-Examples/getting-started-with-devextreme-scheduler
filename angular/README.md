@@ -22,8 +22,8 @@ Run `ng test` to execute unit tests using [Karma](https://karma-runner.github.io
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute end-to-end tests using [Protractor](http://www.protractortest.org/).
+Run `ng e2e` to execute end-to-end tests using [Protractor](https://www.protractortest.org/).
 
 ## Further help
 
-To get more help on the Angular CLI, use `ng help` or review the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI, use `ng help` or review the [Angular CLI Overview and Command Reference](https://v17.angular.io/cli) page.
