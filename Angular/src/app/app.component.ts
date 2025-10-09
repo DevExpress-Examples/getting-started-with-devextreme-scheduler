@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
-import { ClickEvent } from 'devextreme/ui/button';
+import { AppService } from './app.service';
+import type { Appointment } from './app.types';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  providers: [AppService],
 })
 export class AppComponent {
-  title = 'Angular';
+  appointments: Appointment[];
 
-  counter = 0;
+  currentDate: Date = new Date(2021, 4, 25);
 
-  buttonText = 'Click count: 0';
-
-  onClick(e: ClickEvent): void {
-    this.counter++;
-    this.buttonText = `Click count: ${this.counter}`;
+  constructor(service: AppService) {
+    this.appointments = service.getAppointments();
   }
 }

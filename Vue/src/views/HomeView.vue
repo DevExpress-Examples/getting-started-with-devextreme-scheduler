@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import HomeContent from '../components/HomeContent.vue';
+import SchedulerContent from '../components/SchedulerContent.vue';
 </script>
 
 <template>
-  <HomeContent text="Count"/>
+  <SchedulerContent/>
 </template>
-
