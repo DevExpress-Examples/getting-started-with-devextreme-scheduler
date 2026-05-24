@@ -3,10 +3,11 @@ import { AppService } from './app.service';
 import type { Appointment } from './app.types';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [AppService],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    providers: [AppService],
+    standalone: false
 })
 export class AppComponent {
   appointments: Appointment[];
