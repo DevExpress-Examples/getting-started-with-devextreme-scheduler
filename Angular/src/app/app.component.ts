@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { AppService } from './app.service';
 import type { Appointment } from './app.types';
 
+import { DxSchedulerModule } from 'devextreme-angular/ui/scheduler';
+
 @Component({
     selector: 'app-root',
+    imports: [DxSchedulerModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     providers: [AppService],
-    standalone: false
 })
 export class AppComponent {
   appointments: Appointment[];
