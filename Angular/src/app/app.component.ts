@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AppService } from './app.service';
 import type { Appointment } from './app.types';
 
@@ -9,6 +9,7 @@ import { DxSchedulerModule } from 'devextreme-angular/ui/scheduler';
     imports: [DxSchedulerModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [AppService],
 })
 export class AppComponent {
