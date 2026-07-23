@@ -1,0 +1,36 @@
+@(Html.DevExtreme().Scheduler()
+    .DataSource(d => d
+        .Mvc().Controller("SchedulerData")
+        .LoadAction("Get")
+        .InsertAction("Insert")
+        .UpdateAction("Update")
+        .DeleteAction("Delete")
+        .Key("ID")
+    )
+    .TextExpr("Title")
+    .StartDateExpr("StartDate")
+    .EndDateExpr("EndDate")
+    .AllDayExpr("DayLong")
+    .RecurrenceRuleExpr("Recurrence")
+    .RecurrenceExceptionExpr("RecurrenceException")
+    .CurrentDate(new DateTime(2021, 5, 25))
+    .Views(v => {
+        v.Add()
+            .Type(SchedulerViewType.Day)
+            .StartDayHour(10)
+            .EndDayHour(22);
+        v.Add()
+            .Type(SchedulerViewType.Week)
+            .StartDayHour(10)
+            .EndDayHour(22);
+        v.Add()
+            .Type(SchedulerViewType.Month);
+    })
+    .CurrentView(SchedulerViewType.Week)
+    .Editing(e => e
+        .AllowDragging(false)
+        .AllowTimeZoneEditing(true)
+    )
+    .TimeZone("Europe/Berlin")
+    .AdaptivityEnabled(true)
+)
