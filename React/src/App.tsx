@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import './App.css';
-import 'devextreme/dist/css/dx.material.blue.light.compact.css';
+import 'devextreme/dist/css/dx.fluent.blue.light.css';
 import Scheduler, { View, Editing } from 'devextreme-react/scheduler';
 import type { SchedulerTypes } from 'devextreme-react/scheduler';
 import { appointments } from './data';
